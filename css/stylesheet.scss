@@ -54,6 +54,13 @@ header
 	width: 100%;
 	background-color: #fff;
 	text-align: center;
+	z-index: 1;
+}
+
+.space-header-footer
+{
+	padding-top: 60px;
+	padding-bottom: 50px;
 }
 
 #sidebar-left {
