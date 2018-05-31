@@ -1,0 +1,55 @@
+@import 'variable.scss';
+
+body {
+	background: url("../images/bg.jpg") no-repeat center center fixed;      
+    -webkit-background-size: 280% auto;	
+}
+
+body:before {
+	content: " ";
+	background-color: rgba(0, 0, 0, 0.2);
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+}
+
+.login-btn {
+	background-color: rgba(0, 0, 0, 0.1);
+	border: solid 2px #ffffff;
+	color: #fff;
+}
+
+.login-txt, .login-txt:focus {
+	background-color: rgba(0, 0, 0, 0.1);
+	background-color: transparent;
+	border: none;
+	border-bottom: solid 2px #ffffff;
+	box-shadow: none;
+	color: #fff;
+}
+
+
+.facebook-btn {
+	background-color: $facebook-color;
+	border: solid 2px $facebook-color;
+	color: #ffffff;
+	background-image: url(../images/facebook-btn.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 80%;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+	.login-btn, .facebook-btn, .login-txt {
+		max-width: 500px;
+		margin: 0px auto;
+		background-size: 60%;
+	}
+	.forgot
+	{
+		text-align: center !important;
+	}
+}
