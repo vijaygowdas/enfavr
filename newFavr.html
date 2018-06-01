@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Enfavr - Give Favrs, Get Favrs, Earn Favrcoins</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,viewport-fit=cover">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div class="overlay"></div>
+<header class="p-2">
+  <div class="row">
+    <div class="col-2">
+      <button type="button" id="sidebarCollapseLeft" class="header-pf-img">
+      <dt>Aparna</dt>
+      </button>
+    </div>
+    <div class="col-8 heading"> Ask a Favr - Tutoring </div>
+    <div class="col-2">
+      <button type="button" id="sidebarCollapseRight" class="header-menu">&nbsp;</button>
+    </div>
+  </div>
+</header>
+<nav id="sidebar-left">
+  <div id="accordion">
+    <ul class="side-nav">
+      <li> <a data-toggle="collapse" data-target="#aboutMeTab" class="collapse"><img src="../img/icons/aboutme.png"/>About Me</a>
+        <div id="aboutMeTab" class="collapse" data-parent="#accordion">
+          <ul>
+            <li><span onclick="myProfile();">My Profile</span></li>
+            <li><span onclick="myLocation();">My Location</span></li>
+            <li><span onclick="myFamily();">My Family</span></li>
+          </ul>
+        </div>
+      </li>
+      <li> <a href="#" data-toggle="collapse" data-target="#servicesTab"><img src="../img/icons/service.png">Service & Availability</a>
+        <div id="servicesTab" class="collapse" data-parent="#accordion">
+          <ul>
+            <li><span onclick="myServices();">My Service</span></li>
+            <li><span onclick="myAvailability();">My Availability</span></li>
+          </ul>
+        </div>
+      </li>
+      <li> <a href="#" data-toggle="collapse" data-target="#settingsTab"><img src="../img/icons/setting.png">Settings</a>
+        <div id="settingsTab" class="collapse" data-parent="#accordion">
+          <ul>
+            <li><span onclick="updatePassword();">Password</span></li>
+            <li><span onclick="settings();">Roaming Zone</span></li>
+            <li><span onclick="enfavrCommonSetting();">Enfavr Commons</span></li>
+          </ul>
+        </div>
+      </li>
+      <li> <a href="#" data-toggle="collapse" data-target="#activityTab"><img src="../img/icons/activity.png">Activity</a>
+        <div id="activityTab" class="collapse" data-parent="#accordion">
+          <ul>
+            <li><span onclick="transSummary();">Activity Reports</span></li>
+            <li><span onclick="myStats();">Favrcoin Balance</span></li>
+          </ul>
+        </div>
+      </li>
+      <li class="remove-bg"> <a href="#" onclick="logout()"><img src="../img/icons/logout.png"> Logout </a> </li>
+    </ul>
+  </div>
+</nav>
+<nav id="sidebar-right"> right </nav>
+<div class="space-header-footer">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h4 class="text-primary"><img src="images/who.png" width="30">Who</h4>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 full">
+          <div class="card">
+            <div class="card-header">Select Friends</div>
+            <div class="card-body"> </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bottom-btn">
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn">Cancle</button>
+    <button type="button" class="btn btn-primary">Done Selecting Friends</button>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#dismiss, .overlay').on('click', function () {
+			$('#sidebar-left').removeClass('active');
+			$('#sidebar-right').removeClass('active');
+			$('.overlay').fadeOut();
+		});
+
+		$('#sidebarCollapseLeft').on('click', function () {
+			$('#sidebar-left').addClass('active');
+			$('.overlay').fadeIn();
+			$('.collapse.in').toggleClass('in');
+			$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		});
+
+		$('#sidebarCollapseRight').on('click', function () {
+			$('#sidebar-right').addClass('active');
+			$('.overlay').fadeIn();
+			$('.collapse.in').toggleClass('in');
+			$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		});
+	});
+</script>
+</body>
+</html>
