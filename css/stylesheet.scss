@@ -43,7 +43,7 @@ footer {
 
 footer img
 {
-	height: 25px;
+	height: 38px;
 }
 
 header
@@ -63,13 +63,34 @@ header
 	padding-bottom: 50px;
 }
 
+.heading
+{
+	font-size: 25px;
+	font-variant-caps: all-petite-caps;
+}
+
+.dashboard-btn img {
+	width: 80px;
+	height: 80px;
+	padding: 10px;
+	border: solid 5px #fff;
+	border-radius: 100%;
+	margin-bottom: 5px;
+}
+
+.dashboard-btn .col-4 {
+	text-align: center;
+	color: #fff;
+	line-height: 15px;
+}
+
 #sidebar-left {
 	left: -250px;
 	width: 250px;
     position: fixed;
     top: 0;
     height: 100vh;
-    z-index: 999;
+    z-index: 9999;
     background: #fff;
     color: #555;
     transition: all 0.3s;
@@ -82,7 +103,7 @@ header
     position: fixed;
     top: 0;
     height: 100vh;
-    z-index: 999;
+    z-index: 9999;
     background: #7386D5;
     color: #fff;
     transition: all 0.3s;
@@ -120,7 +141,7 @@ header
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.7);
-    z-index: 998;
+    z-index: 9998;
     display: none;
 }
 
@@ -208,4 +229,14 @@ li.remove-bg a:before
 	color: #000;
 	font-weight: bold;
 	border-bottom: solid 1px #ececec;
+}
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  { 
+	.dashboard-btn img {
+	width: 150px;
+	height: 150px;
+}
 }
