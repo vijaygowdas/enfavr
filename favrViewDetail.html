@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Enfavr - Give Favrs, Get Favrs, Earn Favrcoins</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no,viewport-fit=cover">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link href="css/stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="color-bg-img">
+<div class="overlay"></div>
+<header class="p-2">
+  <div class="row">
+    <div class="col-2">
+      <button type="button" id="" class="header-back"> <img src="images/back.png"> </button>
+    </div>
+    <div class="col-8 heading"> My Favr </div>
+    <div class="col-2"></div>
+  </div>
+</header>
+<div class="space-header">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="card myfavr shadow-sm">
+          <div class="card-header p-2">
+            <div class="pf-img"><img src="images/bg.jpg"></div>
+            <div class="pf-details">
+              <p>Vijay Gowda</p>
+              <div class="score float-left"><img src="images/91100.png">[5/4]</div>
+              <div class="favr-icons float-right"> <img src="images/o2m.png"> <img src="images/accept_grey.png"> <img src="images/decline_grey.png"> <img src="images/trophy_grey.png"> </div>
+            </div>
+          </div>
+          <div class="card-body p-3">
+            <h4 class="text-center">Others</h4>
+            <p>Timer</p>
+            <table class="view-table">
+              <tr>
+                <td>Request Sent to</td>
+                <td>Mei</td>
+              </tr>
+              <tr>
+                <td>Start By</td>
+                <td>09-10-2016 19:30 PM</td>
+              </tr>
+              <tr>
+                <td>Complete By</td>
+                <td>09-10-2016 19:45 PM</td>
+              </tr>
+              <tr>
+                <td colspan="2" class="pl-0"><div class="timer">123456789</div></td>
+              </tr>
+              <tr>
+                <td>Location</td>
+                <td>Bangalore, Karnataka, India</td>
+              </tr>
+              <tr>
+                <td>Favrcoins</td>
+                <td>10</td>
+              </tr>
+            </table>
+          </div>
+          <div class="favr-btn">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" class="btn btn-success">Closed</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-12 myfavr-comment">
+        <h5>Comments</h5>
+        <div class="card my-1">
+          <div class="card-body p-2">
+            <div class="media"> <img class="align-self-center mr-2" src="images/babySitting.jpg" alt="">
+              <div class="media-body">
+                <p>Status : Done</p>
+                <p>Mei Ram</p>
+                <p>Accepted</p>
+                <p>06-04-2018 15:46 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#dismiss, .overlay').on('click', function () {
+			$('#sidebar-left').removeClass('active');
+			$('#sidebar-right').removeClass('active');
+			$('.overlay').fadeOut();
+		});
+
+		$('#sidebarCollapseLeft').on('click', function () {
+			$('#sidebar-left').addClass('active');
+			$('.overlay').fadeIn();
+			$('.collapse.in').toggleClass('in');
+			$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		});
+
+		$('#sidebarCollapseRight').on('click', function () {
+			$('#sidebar-right').addClass('active');
+			$('.overlay').fadeIn();
+			$('.collapse.in').toggleClass('in');
+			$('a[aria-expanded=true]').attr('aria-expanded', 'false');
+		});
+	});
+</script>
+</body>
+</html>
